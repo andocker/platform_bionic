@@ -246,6 +246,7 @@ static prop_area* map_prop_area_rw(const char* filename, const char* context,
   }
 #else
   (void) context;
+  (void) fsetxattr_failed;
 #endif
 
   if (ftruncate(fd, PA_SIZE) < 0) {
